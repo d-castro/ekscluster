@@ -16,7 +16,7 @@ module "eks" {
       max_size     = 10
       desired_size = 1
 
-      instance_types = ["m6i.large", "m5.large", "m5zn.large", "t3.large"]
+      instance_types = ["t3a.large"]
       capacity_type  = "SPOT"
       ami_id         = "ami-0756133502218d50f"
 
