@@ -24,6 +24,11 @@ module "eks" {
       ebs_optimized              = true
 
       subnet_ids = var.private_subnets
+      
+      remote_access = {
+        ec2_ssh_key               = "ansible-provisioning"
+        source_security_group_ids = ["sg-048b0821882ff70f4"]
+      }
 
       block_device_mappings = {
         xvda = {
